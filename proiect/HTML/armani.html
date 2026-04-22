@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Armani — Stronger With You Intensely</title>
+
+<link rel="stylesheet" href="../CSS/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+.detalii{
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.parfum-img{
+width:320px;
+max-width:90%;
+margin:20px auto;
+display:block;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+.info-parfum{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+.info-parfum th,
+.info-parfum td{
+border:1px solid #ddd;
+padding:10px;
+}
+
+.info-parfum th{
+background:#ff758c;
+color:white;
+}
+
+.rating{
+font-size:28px;
+margin:15px 0;
+cursor:pointer;
+}
+
+canvas{
+max-width:350px;
+margin:30px auto;
+display:block;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:30px;
+padding:10px 20px;
+background:#ff758c;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body class="gradient">
+
+<header>
+<h1>Armani — Stronger With You Intensely</h1>
+</header>
+
+<div class="detalii">
+
+<img src="../img/armani.jpg" class="parfum-img">
+
+<p>
+Stronger With You Intensely este un parfum intens, dulce și seducător
+din colecția Emporio Armani. Parfumul combină note de vanilie,
+scorțișoară și castan pentru a crea o aromă caldă și profundă.
+Este ideal pentru serile reci de toamnă și iarnă și este cunoscut
+pentru longevitatea foarte bună și proiecția puternică.
+🔥🍂
+</p>
+
+<h2>Caracteristici</h2>
+
+<table class="info-parfum">
+
+<tr>
+<th>Brand</th>
+<td>Emporio Armani</td>
+</tr>
+
+<tr>
+<th>Tip</th>
+<td>Eau de Parfum</td>
+</tr>
+
+<tr>
+<th>Longevitate</th>
+<td>10-12 ore</td>
+</tr>
+
+<tr>
+<th>Proiecție</th>
+<td>Puternică</td>
+</tr>
+
+<tr>
+<th>Sezon</th>
+<td>Toamnă / Iarnă</td>
+</tr>
+
+</table>
+
+<h2>Rating</h2>
+
+<div class="rating">
+
+<span onclick="rate(1)">⭐</span>
+<span onclick="rate(2)">⭐</span>
+<span onclick="rate(3)">⭐</span>
+<span onclick="rate(4)">⭐</span>
+<span onclick="rate(5)">⭐</span>
+
+</div>
+
+<div>
+<button onclick="like()">❤️ Adaugă la favorite</button>
+</div>
+
+<button onclick="addToCart('Stronger With You Intensely')">🛒 Adaugă în coș</button>
+
+<h2>Persistență pe piele</h2>
+
+<canvas id="graf"></canvas>
+
+<a href="../index.html" class="back-btn">← Înapoi la parfumuri</a>
+
+</div>
+
+<script>
+
+const ctx = document.getElementById('graf');
+
+new Chart(ctx,{
+
+type:'bar',
+
+data:{
+labels:['1h','2h','4h','6h','8h','10h'],
+
+datasets:[{
+label:'Persistență',
+data:[95,90,85,75,65,55],
+backgroundColor:'#ff758c'
+}]
+
+}
+
+});
+
+</script>
+
+<script src="../JS/script.js"></script>
+
+</body>
+</html>

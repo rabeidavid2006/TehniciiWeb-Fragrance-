@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Versace Eros</title>
+
+<link rel="stylesheet" href="../CSS/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+.detalii{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+.info-parfum{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+.info-parfum th,
+.info-parfum td{
+border:1px solid #ddd;
+padding:10px;
+}
+
+.info-parfum th{
+background:#e73c7e;
+color:white;
+}
+
+.rating span{
+font-size:25px;
+cursor:pointer;
+}
+
+canvas{
+max-width:350px;
+margin:30px auto;
+display:block;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:30px;
+padding:10px 20px;
+background:#e73c7e;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Versace — Eros</h1>
+</header>
+
+<div class="parfum-hero">
+
+<img src="../img/versace.jpg" alt="Versace Eros" class="parfum-img">
+
+</div>
+
+<div class="detalii">
+
+<p>
+Versace Eros este un parfum inspirat de zeul grec al iubirii și al
+pasiunii. ⚡ Parfumul combină note proaspete de mentă 🌿 și lămâie 🍋
+cu o bază dulce de vanilie și tonka bean.
+
+Această combinație creează un parfum intens, energic și seducător.
+Eros este foarte popular pentru ieșiri în oraș, petreceri sau
+evenimente speciale.
+
+Parfumul este cunoscut pentru proiecția sa puternică și pentru
+caracterul său masculin și memorabil. Persistența bună și aroma
+distinctivă îl fac unul dintre cele mai populare parfumuri Versace.
+</p>
+
+<h2>Caracteristici</h2>
+
+<table class="info-parfum">
+
+<tr>
+<th>Brand</th>
+<td>Versace</td>
+</tr>
+
+<tr>
+<th>Tip</th>
+<td>Eau de Parfum</td>
+</tr>
+
+<tr>
+<th>Longevitate</th>
+<td>9 ore</td>
+</tr>
+
+<tr>
+<th>Proiecție</th>
+<td>Puternică</td>
+</tr>
+
+<tr>
+<th>Sezon</th>
+<td>Primăvară / Vară</td>
+</tr>
+
+</table>
+
+<h2>Rating</h2>
+
+<div class="rating">
+
+<span onclick="rate(1)">⭐</span>
+<span onclick="rate(2)">⭐</span>
+<span onclick="rate(3)">⭐</span>
+<span onclick="rate(4)">⭐</span>
+<span onclick="rate(5)">⭐</span>
+
+</div>
+
+<br>
+
+<button onclick="like()">❤️ Adaugă la favorite</button>
+<button onclick="addToCart('Eros')">🛒 Adaugă în coș</button>
+
+<h2>Persistență pe piele</h2>
+
+<canvas id="graf"></canvas>
+
+<a href="../index.html" class="back-btn">← Înapoi la parfumuri</a>
+
+</div>
+
+<script>
+
+const ctx=document.getElementById('graf');
+
+new Chart(ctx,{
+type:'bar',
+data:{
+labels:['1h','2h','4h','6h','8h'],
+datasets:[{
+label:'Persistență',
+data:[90,85,75,60,45],
+backgroundColor:'#e73c7e'
+}]
+}
+});
+
+</script>
+
+<script src="../JS/script.js"></script>
+
+</body>
+</html>
