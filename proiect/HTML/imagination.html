@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Louis Vuitton Imagination</title>
+
+<link rel="stylesheet" href="../CSS/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+.detalii{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+.info-parfum{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+.info-parfum th,
+.info-parfum td{
+border:1px solid #ddd;
+padding:10px;
+}
+
+.info-parfum th{
+background:#e73c7e;
+color:white;
+}
+
+.rating span{
+font-size:25px;
+cursor:pointer;
+}
+
+canvas{
+max-width:350px;
+margin:30px auto;
+display:block;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:30px;
+padding:10px 20px;
+background:#e73c7e;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Louis Vuitton — Imagination</h1>
+</header>
+
+<div class="parfum-hero">
+<img src="../img/imagination.jpg" class="parfum-img">
+</div>
+
+<div class="detalii">
+
+<p>
+Imagination de la Louis Vuitton este un parfum elegant și luminos 🌟.
+Notele sale citrice și de ceai oferă o senzație de prospețime și
+rafinament.
+
+Este un parfum foarte versatil, ideal pentru zilele de vară ☀️,
+întâlniri business sau utilizarea zilnică. Mirosul său curat și
+luxos îl face unul dintre cele mai apreciate parfumuri fresh.
+</p>
+
+<h2>Caracteristici</h2>
+
+<table class="info-parfum">
+
+<tr>
+<th>Brand</th>
+<td>Louis Vuitton</td>
+</tr>
+
+<tr>
+<th>Tip</th>
+<td>Eau de Parfum</td>
+</tr>
+
+<tr>
+<th>Longevitate</th>
+<td>8 ore</td>
+</tr>
+
+<tr>
+<th>Proiecție</th>
+<td>Moderată</td>
+</tr>
+
+<tr>
+<th>Sezon</th>
+<td>Primăvară / Vară</td>
+</tr>
+
+</table>
+
+<h2>Rating</h2>
+
+<div class="rating">
+<span onclick="rate(1)">⭐</span>
+<span onclick="rate(2)">⭐</span>
+<span onclick="rate(3)">⭐</span>
+<span onclick="rate(4)">⭐</span>
+<span onclick="rate(5)">⭐</span>
+</div>
+
+<br>
+
+<button onclick="like()">❤️ Adaugă la favorite</button>
+<button onclick="addToCart('Imagination')">🛒 Adaugă în coș</button>
+
+<h2>Persistență pe piele</h2>
+
+<canvas id="graf"></canvas>
+
+<a href="../index.html" class="back-btn">← Înapoi la parfumuri</a>
+
+</div>
+
+<script>
+
+const ctx=document.getElementById('graf');
+
+new Chart(ctx,{
+type:'bar',
+data:{
+labels:['1h','2h','4h','6h','8h'],
+datasets:[{
+label:'Persistență',
+data:[85,80,70,60,45],
+backgroundColor:'#e73c7e'
+}]
+}
+});
+
+</script>
+
+<script src="../JS/script.js"></script>
+
+</body>
+</html>

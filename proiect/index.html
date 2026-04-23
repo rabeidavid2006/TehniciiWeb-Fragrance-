@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fragrance</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="gradient">
+
+<header>
+<h1>Elevate Your Aura</h1>
+<p>Scents that tell your story</p>
+<p>Rabei David CR-252</p>
+</header>
+
+<div class="tema-switch">
+<button onclick="setTema('gradient')">🌈</button>
+<button onclick="setTema('light')">☀️</button>
+<button onclick="setTema('dark')">🌙</button>
+</div>
+
+<div style="text-align:center; margin-bottom:20px;">
+<button onclick="randomParfum()">🎲 Parfum Random</button>
+</div>
+
+<div class="cos-container">
+<h2>🛒 Coșul meu</h2>
+<ul id="cos-lista"></ul>
+</div>
+
+<h2>Formular Contact</h2>
+
+<form id="form-contact">
+
+<input type="text" id="nume" placeholder="Nume" required>
+<br><br>
+
+<input type="email" id="email" placeholder="Email" required>
+<br><br>
+
+<button type="submit">Trimite</button>
+
+</form>
+
+<p id="rezultat"></p>
+
+
+<main>
+
+<section class="parfum-card">
+<a href="HTML/lebeau.html">
+<h2>JPG — Le Beau</h2>
+<img src="img/lebeau.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/sauvage.html">
+<h2>Dior — Sauvage</h2>
+<img src="img/dior.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/eros.html">
+<h2>Versace — Eros</h2>
+<img src="img/versace.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/khamrah.html">
+<h2>Lattafa — Khamrah</h2>
+<img src="img/khamrah.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/maahir.html">
+<h2>Lattafa — Maahir Legacy</h2>
+<img src="img/maahir.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/erosenergy.html">
+<h2>Versace — Eros Energy</h2>
+<img src="img/erosenergy.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/najim.html">
+<h2>Versace — Eros Najim</h2>
+<img src="img/najim.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/powerfully.html">
+<h2>Armani — Stronger With You Powerfully</h2>
+<img src="img/powerfully.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/imagination.html">
+<h2>Louis Vuitton — Imagination</h2>
+<img src="img/imagination.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/oudwood.html">
+<h2>Tom Ford — Oud Wood</h2>
+<img src="img/oudwood.jpg" class="foto-parfum">
+</a>
+</section>
+
+<section class="parfum-card">
+<a href="HTML/armani.html">
+<h2>Armani — Stronger With You Intensely</h2>
+<img src="img/armani.jpg" class="foto-parfum">
+</a>
+</section>
+
+</main>
+
+<div class="tabel-container">
+<h2>Caracteristici parfumuri</h2>
+
+<table>
+<tr>
+<th>Parfum</th>
+<th>Longevitate</th>
+<th>Proiecție</th>
+<th>Sezon</th>
+</tr>
+
+<tr><td>Le Beau</td><td>8h</td><td>Moderată</td><td>Vară</td></tr>
+<tr><td>Sauvage</td><td>10h</td><td>Puternică</td><td>Tot anul</td></tr>
+<tr><td>Eros</td><td>9h</td><td>Puternică</td><td>Primăvară / Vară</td></tr>
+<tr><td>Khamrah</td><td>12h</td><td>Foarte puternică</td><td>Iarnă</td></tr>
+<tr><td>Maahir</td><td>7h</td><td>Moderată</td><td>Primăvară</td></tr>
+<tr><td>Eros Energy</td><td>8h</td><td>Moderată</td><td>Vară</td></tr>
+<tr><td>Najim</td><td>9h</td><td>Puternică</td><td>Seară</td></tr>
+<tr><td>Powerfully</td><td>11h</td><td>Puternică</td><td>Iarnă</td></tr>
+<tr><td>Imagination</td><td>9h</td><td>Moderată</td><td>Vară</td></tr>
+<tr><td>Oud Wood</td><td>10h</td><td>Puternică</td><td>Toamnă</td></tr>
+<tr><td>Intensely</td><td>11h</td><td>Puternică</td><td>Iarnă</td></tr>
+</table>
+</div>
+
+<footer>
+<p>Rabei David CR-252</p>
+</footer>
+
+<script src="JS/script.js?v=2"></script>
+
+</body>
+</html>
